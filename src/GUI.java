@@ -50,7 +50,10 @@ public class GUI implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             String user = userText.getText();
-            String password = passwordText.getText();
+            // New way to get password from JPassword Field
+            String password = new String(passwordText.getPassword());
+            // Old Way
+            // String password = passwordText.getText();
             String correctPass = "DizzMaster43";
 
             if(user.equals("Alex") && password.equals(correctPass)) {
