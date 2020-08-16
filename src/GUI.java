@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.awt.event.*;
 
-public class GUI implements ActionListener {
+public class GUI implements ActionListener 
+{
 
     private static JLabel userLabel;
     private static JTextField userText;
@@ -9,7 +10,8 @@ public class GUI implements ActionListener {
     private static JPasswordField passwordText;
     private static JButton button;
     private static JLabel success;
-        public static void main(String[] args) {
+        public static void main(String[] args) 
+        {
 
             JPanel panel = new JPanel();
             JFrame frame = new JFrame();
@@ -48,7 +50,8 @@ public class GUI implements ActionListener {
             frame.setVisible(true);
         }
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e) 
+        {
             String user = userText.getText();
             // New way to get password from JPassword Field
             String password = new String(passwordText.getPassword());
@@ -56,7 +59,8 @@ public class GUI implements ActionListener {
             // String password = passwordText.getText();
             String correctPass = "DizzMaster43";
 
-            if(user.equals("Alex") && password.equals(correctPass)) {
+            if(user.equals("Alex") && password.equals(correctPass)) 
+            {
                 success.setText("Login Successful!");
             }
             
